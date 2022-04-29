@@ -1,0 +1,27 @@
+## @file
+#
+# Copyright (c) 2022 - 2022, Ihaventeatenyet. All rights reserved.<BR>
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SpriteBubbleTea
+  FILE_GUID                      = 2e7b39a8-1a76-4dc3-b08c-fe711eb08e5f
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = UefiMain
+
+
+[Sources]
+  SpriteBubbleTea.c
+
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+
+
