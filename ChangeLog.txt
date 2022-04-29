@@ -1,4 +1,11 @@
+**  [002] Get screen resolution.
+      Date : 04/29/2022
+      Mark : Ihaventeatenyet_002
+      File : */SpriteBubbleTeaPkg/SpriteBubbleTea.c
+             +/Tool/GetGraphicsResolution.efi
+
 **  [001] Initial UefiApplication Print validation.
+      Date : 04/29/2022
       Mark : Ihaventeatenyet_001
       File : +SpriteBubbleTeaPkg\*
              */EmulatorPkg/EmulatorPkg.dsc
