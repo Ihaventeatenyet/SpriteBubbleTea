@@ -2,19 +2,44 @@
 #include <Library/UefiLib.h>
 #include <Library/UefiApplicationEntryPoint.h>
 #include <Library/UefiBootServicesTableLib.h>//Ihaventeatenyet_002 ++
+#include "ImLibraryLib/ImLibraryLib.h"//Ihaventeatenyet_004 ++
 
 
-#define Get_Graphics_Resolution 1//Ihaventeatenyet_002 ++
+#define Get_Graphics_Resolution 0//Ihaventeatenyet_002 ++
+#define Get_Current_Time 0//Ihaventeatenyet_003 ++
+#define Create_Library_Test 1//Ihaventeatenyet_004 ++
 
+//Ihaventeatenyet_003 ++>>
+#if Get_Current_Time
+EFI_STATUS
+GetCurrentTime ( VOID )
+{
+    EFI_STATUS           Status = EFI_SUCCESS;
+    EFI_TIME             time;
+    UINTN                i=0;
 
-
+    for(i=0;i<10;i++){
+    gST->RuntimeServices->GetTime (&time,NULL);
+    Print(L"CurrentTime:%d-%d-%d %d:%d:%d\n",
+                              time.Year,
+                              time.Month,
+                              time.Day,
+                              time.Hour,
+                              time.Minute,
+                              time.Second);
+    gST->BootServices->Stall(2*1000000);//Delay 2s
+    }
+    return Status;
+}
+#endif
+//Ihaventeatenyet_003 ++<<
 
 //Ihaventeatenyet_002 ++>>
 #if Get_Graphics_Resolution
 EFI_STATUS
 GetGraphicsResolution ( VOID )
 {
-    EFI_STATUS  Status = EFI_SUCCESS;
+    EFI_STATUS           Status = EFI_SUCCESS;
     UINTN                HandleCount=0;
     EFI_HANDLE           *Handles;
     EFI_HANDLE           *ImageHandle;
@@ -77,8 +102,20 @@ UefiMain (
   )
   {
       //Print(L"       Hello BubbleTea\n");
+//Ihaventeatenyet_002 ++>>
 #if Get_Graphics_Resolution
-      GetGraphicsResolution();
+    GetGraphicsResolution();
 #endif
+//Ihaventeatenyet_002 ++<<
+//Ihaventeatenyet_003 ++>>
+#if Get_Current_Time
+    GetCurrentTime();
+#endif
+//Ihaventeatenyet_003 ++<<
+//Ihaventeatenyet_004 ++>>
+#if Create_Library_Test
+    LibFunction();
+#endif
+//Ihaventeatenyet_004 ++<<
       return 0;
   }

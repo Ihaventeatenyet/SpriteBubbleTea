@@ -1,3 +1,18 @@
+**  [004] Test library module added.
+      Date : 04/30/2022
+      Mark : Ihaventeatenyet_004
+      File : */SpriteBubbleTeaPkg/SpriteBubbleTea.c
+             */SpriteBubbleTeaPkg/SpriteBubbleTea.inf
+             */EmulatorPkg/EmulatorPkg.dsc
+             +/SpriteBubbleTeaPkg/ImLibraryLib/*
+             +/Tool/AddLibrary.efi
+
+**  [003] Get Current Time.
+      Date : 04/30/2022
+      Mark : Ihaventeatenyet_003
+      File : */SpriteBubbleTeaPkg/SpriteBubbleTea.c
+             +/Tool/GetCurrentTime.efi
+
 **  [002] Get screen resolution.
       Date : 04/29/2022
       Mark : Ihaventeatenyet_002

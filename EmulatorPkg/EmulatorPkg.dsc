@@ -83,6 +83,7 @@
   DxeServicesLib|MdePkg/Library/DxeServicesLib/DxeServicesLib.inf
   DxeServicesTableLib|MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.inf
   SmbiosLib|EmulatorPkg/Library/SmbiosLib/SmbiosLib.inf
+  ImLibraryLib|SpriteBubbleTeaPkg/ImLibraryLib/ImLibraryLib.inf#Ihaventeatenyet_004 ++
 
   #
   # Generic Modules
@@ -329,7 +330,7 @@
   EmulatorPkg/FlashMapPei/FlashMapPei.inf
   EmulatorPkg/ThunkPpiToProtocolPei/ThunkPpiToProtocolPei.inf
   MdeModulePkg/Core/DxeIplPeim/DxeIpl.inf
-  SpriteBubbleTeaPkg/SpriteBubbleTea.inf#Ihaventeatenyet_001++
+  SpriteBubbleTeaPkg/SpriteBubbleTea.inf#Ihaventeatenyet_001 ++
 
   ##
   #  DXE Phase modules
